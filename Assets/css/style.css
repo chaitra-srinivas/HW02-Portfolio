@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --bodyColor: hsl(0, 0%, 50%);
+    --linkText: rgb(255, 255, 255);
+    --bgColor: #111111;
+}
+
+header{
+    background-color: var(--bodyColor);
+}
+
+.navbar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: right;
+  }
+  
+  li a {
+    display: block;
+    color: var(--linkText);
+    text-align: right;
+    padding: 16px;
+    text-decoration: none;
+   
+  }
+  
+  li a:hover {
+    background-color: var(--bgColor);
+  }
