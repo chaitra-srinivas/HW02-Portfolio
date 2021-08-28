@@ -12,17 +12,19 @@ body {
   /* Sans Serif font stack is implemented to help select the best font for each type of computer operating system */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-
   /* set body font size to 1.75rem, which is 1.75x more than the font-size of 10px, making it 17.5px  */
   font-size: 1.75rem;
   line-height: 1.5;
   color: var(--gin);
   background-color: var(--outer-space);
+  width: 100%;
 }
 
 main {
-  width: 96%;
-  margin: 2rem auto;
+  width: 100%;
+  /*  margin: 2rem auto; */
+  margin: auto;
+  float: right;
 }
 
 html {
@@ -30,10 +32,6 @@ html {
   font-size: 62.5%;
 }
 
-::selection {
-  background-color: var(--bright-turquoise);
-  color: var(--outer-space);
-}
 .navContainer {
   display: flex;
   flex-direction: row;
@@ -52,27 +50,27 @@ html {
   margin-bottom: 1.5rem;
   order: 2;
 }
-.navbar{
-    background-color: burlywood;
-    display: flex-start;
-    border: black solid 5px;
-    flex: 1 0 25%;
-    padding: 1.5rem;
-    /* when the screen resizes, make it so our columns don't jump in size */
-    transition: flex-basis 500ms linear;
-    margin-bottom: 1.5rem;
-    order: 1;
+.navbar {
+  background-color: burlywood;
+  display: flex-start;
+  border: black solid 5px;
+  flex: 1 0 25%;
+  padding: 1.5rem;
+  /* when the screen resizes, make it so our columns don't jump in size */
+  transition: flex-basis 500ms linear;
+  margin-bottom: 1.5rem;
+  order: 1;
 }
 
-.main-content{
+.main-content {
   display: flex;
   flex-direction: row;
- align-items: center;
-  /*justify-content: center;
-   flex-wrap: wrap;*/
+  /*align-items: flex-end;*/
+  justify-content: center;
+   flex-wrap: wrap;
   background-image: url("/Assets/images/bluesky.jpg");
 }
-  /* /*  width: auto;
+/* /*  width: auto;
     height: auto; 
   display: flex;
   flex-basis: 70%;
@@ -81,60 +79,69 @@ html {
   flex: 1 0 75%;
   padding: 1.5rem;
   /* when the screen resizes, make it so our columns don't jump in size */
- /* transition: flex-basis 500ms linear;
+/* transition: flex-basis 500ms linear;
   margin-bottom: 1.5rem; */
 
-.wdQuote{
-    display: flex-start;
-    flex: 1 0 70%;
-    padding: 1.5rem;
-    font-size: xx-large;
-    font-weight: bolder;
-    font-style: oblique;
-    border: solid 10px black;
-    order: 1;
-   
+.wdQuote {
+  display: flex-start;
+  flex: 1 0 auto;
+  /* padding: 1.5rem; */
+  font-size: xx-large;
+  font-weight: bolder;
+  font-style: oblique;
+  border: solid 10px black;
+  order: 1;
 }
-.profileImg{
-    display: flex-end;
-    flex: 1 0 30%;
-    padding: 1.5rem;
-    border: solid 10px black;
-    order: 2;
+.profileImg {
+  display: flex-end;
+  flex: 1 0 auto;
+  /* padding: 1.5rem; */
+  border: solid 10px black;
+  order: 2;
 }
 
-.hey{
-    max-width: 200px;
-    max-height: 200px;
+.hey {
+  max-width: 200px;
+  max-height: 200px;
+  float: right;
 }
 
 .project-content {
   background-color: rgb(187, 176, 28);
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   border: black solid 5px;
 }
 .prj1-box {
   border: black solid 5px;
   /*flex-grow: 1;*/
-  flex: 1 0 33%;
-  padding: 1.5rem;
+  flex: 1 0 auto;
+  /*  padding: 1.5rem; */
   /* when the screen resizes, make it so our columns don't jump in size */
   transition: flex-basis 500ms linear;
 }
+
+.dayplanner img,
+.weather img,
+.EPMS img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+
 .prj2-box {
   border: black solid 5px;
-  flex: 1 0 33%;
-  padding: 1.5rem;
-  /* when the screen resizes, make it so our columns don't jump in size */
+  flex: 2 0 auto;
+  /*  padding: 1.5rem;
+ */ /* when the screen resizes, make it so our columns don't jump in size */
   transition: flex-basis 500ms linear;
 }
 .prj3-box {
   border: black solid 5px;
-  flex: 1 0 33%;
-  padding: 1.5rem;
+  flex: 1 0 auto;
+  /*  padding: 1.5rem; */
   /* when the screen resizes, make it so our columns don't jump in size */
   transition: flex-basis 500ms linear;
 }
@@ -145,6 +152,7 @@ html {
   justify-content: center;
 }
 .contact {
+    display: flex;
   background-color: lightgray;
   border: black solid 5px;
   justify-content: center;
@@ -154,36 +162,44 @@ footer {
   background-color: lightpink;
   text-align: center;
   width: 100%;
-  position: absolute;
-  bottom: 0;
+  /* position: absolute; 
+   bottom: 0;*/
+ 
   height: 40px;
-  margin-top: 40px;
+  /* margin-top: 40px; */
+  margin-bottom: auto;
   border: black solid 5px;
 }
 
-.navbar ul {
+.navbar ul, .contact ul{
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
 
-li {
+.navlinks li {
   float: right;
 }
 
-li a {
+.navlinks li a {
   display: block;
   color: var(--linkText);
   text-align: right;
   padding: 26px;
   text-decoration: none;
-} 
-
-
+}
 
 li a:hover {
   background-color: var(--bgColor);
+}
+.contact li{
+  text-decoration: none;
+  display: inline-block;
+  color: var(--linkText);
+  text-align: center;
+  padding: 26px;
+  text-decoration: none;
 }
 
 header {
