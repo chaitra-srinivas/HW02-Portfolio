@@ -20,6 +20,41 @@ body {
   width: 100%;
 }
 
+.navbar ul, .contact ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+.navlinks li {
+    float: right;
+  }
+  
+  .navlinks li a {
+    display: block;
+    color: var(--linkText);
+    text-align: right;
+    padding: 26px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: var(--bgColor);
+  }
+  .contact li{
+    text-decoration: none;
+    display: inline-block;
+    color: var(--linkText);
+    text-align: center;
+    padding: 26px;
+    text-decoration: none;
+  }
+  
+  header {
+    background-color: brown;
+  }
+
 main {
   width: 100%;
   /*  margin: 2rem auto; */
@@ -28,8 +63,8 @@ main {
 }
 
 html {
-  /* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
-  font-size: 62.5%;
+/*   set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) 
+ */  font-size: 62.5%;
 }
 
 .navContainer {
@@ -44,8 +79,8 @@ html {
   display: flex-end;
   border: black solid 5px;
   flex: 1 0 75%;
-  padding: 1.5rem;
-  /* when the screen resizes, make it so our columns don't jump in size */
+/*   padding: 1.5rem;
+ */  /* when the screen resizes, make it so our columns don't jump in size */
   transition: flex-basis 500ms linear;
   margin-bottom: 1.5rem;
   order: 2;
@@ -55,8 +90,8 @@ html {
   display: flex-start;
   border: black solid 5px;
   flex: 1 0 25%;
-  padding: 1.5rem;
-  /* when the screen resizes, make it so our columns don't jump in size */
+/*   padding: 1.5rem;
+ */  /* when the screen resizes, make it so our columns don't jump in size */
   transition: flex-basis 500ms linear;
   margin-bottom: 1.5rem;
   order: 1;
@@ -65,11 +100,17 @@ html {
 .main-content {
   display: flex;
   flex-direction: row;
-  /*align-items: flex-end;*/
-  justify-content: center;
+align-items: flex-end;
+ /*   justify-content: center; */ 
    flex-wrap: wrap;
   background-image: url("/Assets/images/bluesky.jpg");
+  height: 400px;
+  width: 100%;
+/*     margin-bottom: 25px;
+ */    background-size: cover;
+    background-position: center;
 }
+
 /* /*  width: auto;
     height: auto; 
   display: flex;
@@ -83,7 +124,7 @@ html {
   margin-bottom: 1.5rem; */
 
 .wdQuote {
-  display: flex-start;
+  display: flex-end;
   flex: 1 0 auto;
   /* padding: 1.5rem; */
   font-size: xx-large;
@@ -110,30 +151,30 @@ html {
   background-color: rgb(187, 176, 28);
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
+  /* justify-content: space-evenly; */
   flex-wrap: wrap;
   border: black solid 5px;
+  object-fit: fill;
+  
 }
+
 .prj1-box {
   border: black solid 5px;
-  /*flex-grow: 1;*/
   flex: 1 0 auto;
-  /*  padding: 1.5rem; */
+   object-fit:contain;
+   padding: 1rem;
   /* when the screen resizes, make it so our columns don't jump in size */
   transition: flex-basis 500ms linear;
 }
 
-.dayplanner img,
-.weather img,
-.EPMS img {
-  max-width: 200px;
-  max-height: 200px;
-}
 
 
 .prj2-box {
   border: black solid 5px;
-  flex: 2 0 auto;
+  flex: 1 0 auto;
+  object-fit:contain;
+  padding: 1rem;
   /*  padding: 1.5rem;
  */ /* when the screen resizes, make it so our columns don't jump in size */
   transition: flex-basis 500ms linear;
@@ -141,11 +182,63 @@ html {
 .prj3-box {
   border: black solid 5px;
   flex: 1 0 auto;
+  object-fit:contain;
+  padding: 1rem;
   /*  padding: 1.5rem; */
   /* when the screen resizes, make it so our columns don't jump in size */
   transition: flex-basis 500ms linear;
 }
 
+.prj4-box {
+    border: black solid 5px;
+    flex: 2 0 auto;
+     object-fit:contain;
+     padding: 1rem;
+    /* when the screen resizes, make it so our columns don't jump in size */
+    transition: flex-basis 500ms linear;
+  }
+
+  .prj5-box {
+    border: black solid 5px;
+    flex: 1 0 auto;
+     object-fit:contain;
+     padding: 1rem;
+    /* when the screen resizes, make it so our columns don't jump in size */
+    transition: flex-basis 500ms linear;
+  }
+
+  .prj6-box {
+    border: black solid 5px;
+    flex: 2 0 auto;
+     object-fit:contain;
+     padding: 1rem;
+    /* when the screen resizes, make it so our columns don't jump in size */
+    transition: flex-basis 500ms linear;
+  }
+.prj1-box img, .prj3-box img, .prj5-box img
+{  
+    max-height: 200px;
+    max-width: 300px;
+}
+
+ .prj2-box img, .prj4-box img, .prj6-box img
+ { 
+    max-height: 200px;
+    max-width: 500px;
+}
+.bottom-left{
+  position: absolute;
+  bottom: 25px;
+  left: 20px;
+  font-weight: bold;
+
+}
+/* .dayplanner img,
+.weather img,
+.EPMS img {
+    max-height: 200px;
+    max-width: 200px;
+} */
 .skills {
   background-color: goldenrod;
   border: black solid 5px;
@@ -171,40 +264,8 @@ footer {
   border: black solid 5px;
 }
 
-.navbar ul, .contact ul{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
 
-.navlinks li {
-  float: right;
-}
 
-.navlinks li a {
-  display: block;
-  color: var(--linkText);
-  text-align: right;
-  padding: 26px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: var(--bgColor);
-}
-.contact li{
-  text-decoration: none;
-  display: inline-block;
-  color: var(--linkText);
-  text-align: center;
-  padding: 26px;
-  text-decoration: none;
-}
-
-header {
-  background-color: brown;
-}
 
 /* /* // Small devices (landscape phones, less than 768px) */
 /* @media (min-width: 767.98px) { 

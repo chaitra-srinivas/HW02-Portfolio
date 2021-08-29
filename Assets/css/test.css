@@ -1,0 +1,30 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(88, 84, 84);
+    border: black;
+    justify-content: flex-start;
+    color: cornsilk;
+    object-fit: fill;
+    max-width: auto;
+    padding: 20px;
+}
+.item1 img, .item2 img, .item3 img{
+border-image:space;
+max-width: 200px;
+max-height: 200px;
+}
+
+.item2{
+flex: 2,0,50%;
+border: white, solid, 5px;
+}
+.item3{
+    flex: 1,0,25%;
+    border: darkgrey, solid, 5px;
+}
+.item1{
+    flex: 1,0,25%;
+    border: darkgrey, solid, 5px;
+
+}
