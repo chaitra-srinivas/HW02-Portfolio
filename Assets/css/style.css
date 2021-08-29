@@ -6,6 +6,7 @@
 :root {
   --linkText: rgba(255, 255, 255, 0.966);
   --bgColor: #e4dede80;
+  --navColor: lightgrey;
 }
 
 body {
@@ -15,45 +16,44 @@ body {
   /* set body font size to 1.75rem, which is 1.75x more than the font-size of 10px, making it 17.5px  */
   font-size: 1.75rem;
   line-height: 1.5;
-  color: var(--gin);
-  background-color: var(--outer-space);
   width: 100%;
 }
 
-.navbar ul, .contact ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-  
+.navbar ul,
+.contact ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
 .navlinks li {
-    float: right;
-  }
-  
-  .navlinks li a {
-    display: block;
-    color: var(--linkText);
-    text-align: right;
-    padding: 26px;
-    text-decoration: none;
-  }
-  
-  li a:hover {
-    background-color: var(--bgColor);
-  }
-  .contact li{
-    text-decoration: none;
-    display: inline-block;
-    color: var(--linkText);
-    text-align: center;
-    padding: 26px;
-    text-decoration: none;
-  }
-  
-  header {
-    background-color: brown;
-  }
+  float: right;
+}
+
+.navlinks li a {
+  display: block;
+  color: var(--linkText);
+  text-align: right;
+  padding: 26px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: var(--bgColor);
+}
+.contact li {
+  text-decoration: none;
+  display: inline-block;
+  color: var(--linkText);
+  text-align: center;
+  padding: 26px;
+  text-decoration: none;
+}
+
+header {
+  background-color: var(--bgColor);
+}
 
 main {
   width: 100%;
@@ -63,8 +63,9 @@ main {
 }
 
 html {
-/*   set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) 
- */  font-size: 62.5%;
+  /*   set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) 
+ */
+  font-size: 62.5%;
 }
 
 .navContainer {
@@ -75,23 +76,23 @@ html {
 }
 
 .navlinks {
-  background-color: burlywood;
+  background-color: var(--navColor);
   display: flex-end;
-  border: black solid 5px;
-  flex: 1 0 75%;
-/*   padding: 1.5rem;
- */  /* when the screen resizes, make it so our columns don't jump in size */
+/*   border: black solid 5px;
+ */  flex: 1 0 75%;
+  /*   padding: 1.5rem;
+ */ /* when the screen resizes, make it so our columns don't jump in size */
   transition: flex-basis 500ms linear;
   margin-bottom: 1.5rem;
   order: 2;
 }
 .navbar {
-  background-color: burlywood;
+  background-color: var(--navColor);
   display: flex-start;
-  border: black solid 5px;
-  flex: 1 0 25%;
-/*   padding: 1.5rem;
- */  /* when the screen resizes, make it so our columns don't jump in size */
+/*   border: black solid 5px;
+ */  flex: 1 0 25%;
+  /*   padding: 1.5rem;
+ */ /* when the screen resizes, make it so our columns don't jump in size */
   transition: flex-basis 500ms linear;
   margin-bottom: 1.5rem;
   order: 1;
@@ -100,15 +101,16 @@ html {
 .main-content {
   display: flex;
   flex-direction: row;
-align-items: flex-end;
- /*   justify-content: center; */ 
-   flex-wrap: wrap;
+  align-items: flex-end;
+  /*   justify-content: center; */
+  flex-wrap: wrap;
   background-image: url("/Assets/images/bluesky.jpg");
   height: 400px;
   width: 100%;
-/*     margin-bottom: 25px;
- */    background-size: cover;
-    background-position: center;
+  /*     margin-bottom: 25px;
+ */
+  background-size: cover;
+  background-position: center;
 }
 
 /* /*  width: auto;
@@ -130,14 +132,14 @@ align-items: flex-end;
   font-size: xx-large;
   font-weight: bolder;
   font-style: oblique;
-  border: solid 10px black;
+/*    border: solid 10px black;*/
   order: 1;
 }
 .profileImg {
   display: flex-end;
   flex: 1 0 auto;
   /* padding: 1.5rem; */
-  border: solid 10px black;
+ /* border: solid 10px black;*/
   order: 2;
 }
 
@@ -148,91 +150,112 @@ align-items: flex-end;
 }
 
 .project-content {
-  background-color: rgb(187, 176, 28);
+  background-color: (--bgColor);
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   /* justify-content: space-evenly; */
   flex-wrap: wrap;
-  border: black solid 5px;
+  border: grey solid 2px;
   object-fit: fill;
-  
 }
 
 .prj1-box {
-  border: black solid 5px;
-  flex: 1 0 auto;
-   object-fit:contain;
-   padding: 1rem;
+  border: grey solid 2px;
+  flex: 2 0 auto;
+  object-fit: contain;
+  padding: 1rem;
   /* when the screen resizes, make it so our columns don't jump in size */
   transition: flex-basis 500ms linear;
+  
 }
 
-
-
 .prj2-box {
-  border: black solid 5px;
+  border: grey solid 2px;
   flex: 1 0 auto;
-  object-fit:contain;
+  object-fit: contain;
   padding: 1rem;
   /*  padding: 1.5rem;
  */ /* when the screen resizes, make it so our columns don't jump in size */
   transition: flex-basis 500ms linear;
 }
 .prj3-box {
-  border: black solid 5px;
+  border: grey solid 2px;
   flex: 1 0 auto;
-  object-fit:contain;
+  object-fit: contain;
   padding: 1rem;
   /*  padding: 1.5rem; */
   /* when the screen resizes, make it so our columns don't jump in size */
   transition: flex-basis 500ms linear;
+ 
 }
 
 .prj4-box {
-    border: black solid 5px;
+  border: grey solid 2px;
+  flex: 2 0 auto;
+  object-fit: contain;
+  padding: 1rem;
+  /* when the screen resizes, make it so our columns don't jump in size */
+  transition: flex-basis 500ms linear;
+  
+}
+
+.prj5-box {
+  border: grey solid 2px;
+  flex: 1 0 auto;
+  object-fit: contain;
+  padding: 1rem;
+  /* when the screen resizes, make it so our columns don't jump in size */
+  transition: flex-basis 500ms linear;
+ 
+}
+
+.prj6-box {
+  border: grey solid 2px;
+  flex: 2 0 auto;
+  object-fit: contain;
+  padding: 1rem;
+  /* when the screen resizes, make it so our columns don't jump in size */
+  transition: flex-basis 500ms linear;
+  order:2;
+}
+.prj7-box {
+    border: grey solid 2px;
     flex: 2 0 auto;
-     object-fit:contain;
-     padding: 1rem;
+    object-fit: contain;
+    padding: 1rem;
     /* when the screen resizes, make it so our columns don't jump in size */
     transition: flex-basis 500ms linear;
+    order:1;
   }
 
-  .prj5-box {
-    border: black solid 5px;
+  .prj8-box {
+    border: grey solid 2px;
     flex: 1 0 auto;
-     object-fit:contain;
-     padding: 1rem;
+    object-fit: contain;
+    padding: 1rem;
     /* when the screen resizes, make it so our columns don't jump in size */
     transition: flex-basis 500ms linear;
+    order:-1;
   }
-
-  .prj6-box {
-    border: black solid 5px;
-    flex: 2 0 auto;
-     object-fit:contain;
-     padding: 1rem;
-    /* when the screen resizes, make it so our columns don't jump in size */
-    transition: flex-basis 500ms linear;
-  }
-.prj1-box img, .prj3-box img, .prj5-box img
-{  
-    max-height: 200px;
-    max-width: 300px;
+ 
+.prj3-box img,
+.prj5-box img,
+.prj7-box img,
+.prj8-box img {
+  max-height: 200px;
+  max-width: 500px;
 }
 
- .prj2-box img, .prj4-box img, .prj6-box img
- { 
-    max-height: 200px;
-    max-width: 500px;
+.prj1-box img,
+.prj2-box img,
+.prj4-box img,
+.prj6-box img {
+  max-height: 200px;
+  max-width: 575px;
 }
-.bottom-left{
-  position: absolute;
-  bottom: 25px;
-  left: 20px;
-  font-weight: bold;
 
-}
 /* .dayplanner img,
 .weather img,
 .EPMS img {
@@ -240,32 +263,29 @@ align-items: flex-end;
     max-width: 200px;
 } */
 .skills {
-  background-color: goldenrod;
-  border: black solid 5px;
-  justify-content: center;
+  background-color: var(--bgColor);
+/*   border: black solid 5px;
+ */  justify-content: center;
 }
 .contact {
-    display: flex;
+  display: flex;
   background-color: lightgray;
-  border: black solid 5px;
-  justify-content: center;
+/*   border: black solid 5px;
+ */  justify-content: center;
 }
 
 footer {
-  background-color: lightpink;
+  background-color: var(--navColor);
   text-align: center;
   width: 100%;
   /* position: absolute; 
    bottom: 0;*/
- 
+
   height: 40px;
   /* margin-top: 40px; */
   margin-bottom: auto;
-  border: black solid 5px;
-}
-
-
-
+/*   border: black solid 5px;
+ */}
 
 /* /* // Small devices (landscape phones, less than 768px) */
 /* @media (min-width: 767.98px) { 
