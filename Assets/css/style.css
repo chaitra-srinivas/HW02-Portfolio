@@ -105,6 +105,7 @@ html {
   /*   justify-content: center; */
   flex-wrap: wrap;
   background-image: url("/Assets/images/bluesky.jpg");
+  opacity: 50%;
   height: 400px;
   width: 100%;
   /*     margin-bottom: 25px;
@@ -132,6 +133,7 @@ html {
   font-size: xx-large;
   font-weight: bolder;
   font-style: oblique;
+  color: var(--linkText);
 /*    border: solid 10px black;*/
   order: 1;
 }
@@ -167,8 +169,9 @@ html {
   object-fit: contain;
   padding: 1rem;
   /* when the screen resizes, make it so our columns don't jump in size */
-  transition: flex-basis 500ms linear;
-  
+     /*  transition: flex-basis 500ms linear;*/
+    transition: width 2s;
+
 }
 
 .prj2-box {
@@ -255,6 +258,19 @@ html {
   max-height: 200px;
   max-width: 575px;
 }
+
+.prj1-box:active, 
+.prj2-box:active,
+.prj3-box:active,
+.prj4-box:active,
+.prj5-box:active,
+.prj6-box:active,
+.prj7-box:active,
+.prj8-box:active
+  {
+    width: 700px;
+    
+  }
 
 /* .dayplanner img,
 .weather img,
