@@ -59,7 +59,7 @@ main {
   width: 100%;
   /*  margin: 2rem auto; */
   margin: auto;
-  float: right;
+  float: left;
 }
 
 html {
@@ -102,7 +102,7 @@ html {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  /*   justify-content: center; */
+  justify-content: flex-start;
   flex-wrap: wrap;
   background-image: url("/Assets/images/bluesky.jpg");
   opacity: 50%;
@@ -114,17 +114,6 @@ html {
   background-position: center;
 }
 
-/* /*  width: auto;
-    height: auto; 
-  display: flex;
-  flex-basis: 70%;
-  border: black solid 5px;
-  /*  flex-grow: 1;
-  flex: 1 0 75%;
-  padding: 1.5rem;
-  /* when the screen resizes, make it so our columns don't jump in size */
-/* transition: flex-basis 500ms linear;
-  margin-bottom: 1.5rem; */
 
 .wdQuote {
   display: flex-end;
@@ -134,14 +123,14 @@ html {
   font-weight: bolder;
   font-style: oblique;
   color: var(--linkText);
-/*    border: solid 10px black;*/
+ border: solid 10px black; 
   order: 1;
 }
 .profileImg {
   display: flex-end;
   flex: 1 0 auto;
   /* padding: 1.5rem; */
- /* border: solid 10px black;*/
+  border: solid 10px black;
   order: 2;
 }
 
@@ -161,6 +150,7 @@ html {
   flex-wrap: wrap;
   border: grey solid 2px;
   object-fit: fill;
+  width: 100%;
 }
 
 .prj1-box {
@@ -170,7 +160,7 @@ html {
   padding: 1rem;
   /* when the screen resizes, make it so our columns don't jump in size */
      /*  transition: flex-basis 500ms linear;*/
-    transition: width 2s;
+    transition: width;
 
 }
 
@@ -259,30 +249,28 @@ html {
   max-width: 575px;
 }
 
-.prj1-box:active, 
-.prj2-box:active,
-.prj3-box:active,
-.prj4-box:active,
-.prj5-box:active,
-.prj6-box:active,
-.prj7-box:active,
-.prj8-box:active
+.prj1-box:hover, 
+.prj2-box:hover,
+.prj3-box:hover,
+.prj4-box:hover, 
+.prj5-box:hover,
+.prj6-box:hover,
+.prj7-box:hover,
+.prj8-box:hover
   {
-    width: 700px;
-    
-  }
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+  } 
 
-/* .dayplanner img,
-.weather img,
-.EPMS img {
-    max-height: 200px;
-    max-width: 200px;
-} */
 .skills {
   background-color: var(--bgColor);
 /*   border: black solid 5px;
  */  justify-content: center;
+ width: 100%;
+
 }
+
 .contact {
   display: flex;
   background-color: lightgray;
@@ -303,17 +291,61 @@ footer {
 /*   border: black solid 5px;
  */}
 
-/* /* // Small devices (landscape phones, less than 768px) */
-/* @media (min-width: 767.98px) { 
-    .navbar{
-        width: 50%;
-    } 
+
+/* // Small devices (Phones, less than 768px) */
+@media only screen and (max-width: 768px) { 
+  .navlinks li{
+    float: none;
+    width: 100%;
+  } 
+  .navbar{
+    float: none;
+      width: 100%;
+  }
+  .contact li{
+    float: none;
+      width: 100%;
+  }
+  .main-content .wdQuote, .main-content .profileImg
+  {
+    flex-wrap: wrap;
+    font-size: large;
+    float: none ;
+    width: 100%;
+  }
+}
+
+/* // Large devices (laptops/desktops, more than 992px) */
+/*  @media ( min-width: 992px) { 
+  .navlinks li{
+    float: none;
+      width: 100%;
+  } 
+  .navbar{
+    float: none;
+      width: 100%;
+  }
+  .contact li{
+    float: none;
+      width: 100%;
+  } 
+  
+ }*/
+
+ /* // Extra Large devices (laptops/desktops, more than 992px) */
+ /* @media ( min-width: 1200px) { 
+  .navlinks li{
+    float: none; 
+      width: 100%;
+  }  
+  .navbar{
+ float: none;
+      width: 100%;
+  }
+  .contact li{
+    float: none;
+      width: 100%;
+  }
+  
  }
- */
-/* // Medium devices (tablets, less than 992px) */
-/* @media (max-width: 991.98px) { 
-    .navbar{
-        width: 75%;
-    } 
- }
- */
+*/
