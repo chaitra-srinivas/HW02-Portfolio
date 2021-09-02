@@ -1,30 +1,33 @@
+/* Universal selector */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
+/* Variables assigned colors*/
 :root {
-  --linkTex: #6d5b5bd8;
+  --linkText: #050000d5;
   --bgColor: #e4dee2b9;
   --navColor: rgb(184, 184, 184);
-
+  --borderColor: grey;
+  --quoteColor: black;
 }
 
 body {
   font-family: sans-serif;
-  /* set body font size to 1.75rem, which is 1.75x more than the font-size of 10px, making it 17.5px  */
   font-size: 1.75rem;
   line-height: 1.5;
   width: 100%;
 }
 
+/* Style setting for list items*/
 .navbar ul,
 .contact ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  
 }
 
 .navlinks li {
@@ -38,7 +41,6 @@ body {
   text-align: right;
   padding: 20px;
   text-decoration: none;
- 
 }
 
 li a:hover {
@@ -71,6 +73,7 @@ html {
   font-size: 62.5%;
 }
 
+/*flexbox for the navigation bar */
 .navContainer {
   display: flex;
   flex-direction: row;
@@ -78,42 +81,37 @@ html {
   justify-content: center;
   background-color: var(--bgColor);
   padding: 1.5rem;
+  border: var(--borderColor) solid 2px;
 }
 
 .navlinks {
   background-color: var(--navColor);
   display: flex-end;
-/*   border: black solid 5px;
- */  flex: 1 0 75%;
-   padding: 1.5rem;
-  /* when the screen resizes, make it so our columns don't jump in size */
-  transition: flex-basis 500ms linear;
+  flex: 1 0 75%;
+  padding: 1.5rem;
   order: 2;
 }
 .navbar {
   background-color: var(--navColor);
-   display: flex-start;
-   font-size: large;
-   color: var(--linkText);
-   flex: 1 0 25%;
-   padding: 1.5rem;
- /* when the screen resizes, make it so our columns don't jump in size */
-  transition: flex-basis 500ms linear;
-   order: 1;
+  display: flex-start;
+  font-size: large;
+  color: var(--linkText);
+  flex: 1 0 25%;
+  padding: 1.5rem;
+  order: 1;
 }
 
+/* Flexbox for the main content*/
 .main-content {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   justify-content: flex-start;
   flex-wrap: wrap;
-  /* background-image: url("/Assets/images/geo.png"); */
   height: 600px;
   width: 100%;
   margin-bottom: 2.5rem;
 }
-
 
 .wdQuote {
   display: flex-end;
@@ -122,15 +120,13 @@ html {
   font-size: xx-large;
   font-weight: bolder;
   font-style: oblique;
-  color: black;
- /* border: solid 10px black; */ 
+  color: var(--quoteColor);
   order: 1;
 }
 .profileImg {
   display: flex-end;
   flex: 1 0 auto;
-  padding: 1.5rem; 
- /*  border: solid 10px black; */
+  padding: 1.5rem;
   order: 2;
 }
 
@@ -140,21 +136,21 @@ html {
   float: right;
 }
 
+/* Flexbox container for the projects */
 .project-content {
-  background-color: (--bgColor);
+  background-color: var(--bgColor);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items:  center;
-  /* justify-content: space-evenly; */
+  align-items: center;
   flex-wrap: wrap;
-  border: grey solid 2px;
+  border: var(--borderColor) solid 2px;
   object-fit: contain;
   width: 95%;
   margin: 2%;
   padding: 1rem;
- 
 }
+/*Consolidated style setting for flex items */
 
 .prj1-box,
 .prj3-box,
@@ -164,67 +160,62 @@ html {
 .prj7-box,
 .prj6-box,
 .prj8-box {
- /* border: grey solid 2px; */
   flex: 1 0 auto;
   object-fit: contain;
   padding: 1rem;
-  /* when the screen resizes, make it so our columns don't jump in size */
-  transition: flex-basis 500ms linear;
 }
-
-
+/* Img setting for flex items*/
 .prj1-box > a > img,
 .prj2-box > a > img,
 .prj3-box > a > img,
-.prj4-box > a > img 
-.prj5-box > a > img,
+.prj4-box > a > img .prj5-box > a > img,
 .prj6-box > a > img,
 .prj7-box > a > img,
 .prj8-box > a > img {
-        width: 100%; 
-        height: 100%;
-        object-fit: fill;
-} 
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+/* style setting for anchor tag */
+.project-content a,
+.contact a {
+  text-decoration: none;
+  text-align: center;
+  padding: 0;
+  color: var(--linkText);
+}
 
-
-.project-content a, .contact a
- {
-        text-decoration: none;
-        text-align: center;
-        padding: 0;
-} 
- 
 .prj1-box img,
 .prj3-box img,
 .prj2-box img,
 .prj5-box img,
-.prj4-box img
- {
+.prj4-box img {
   max-height: 300px;
-  max-width: 375px;}
-
+  max-width: 375px;
+}
 
 .prj7-box img,
 .prj6-box img,
 .prj8-box img {
   max-height: 300px;
   max-width: 450px;
- } 
+}
 
+/*Scale image on click */
 .prj1-box:active,
 .prj2-box:active,
 .prj3-box:active,
-.prj4-box:active, 
+.prj4-box:active,
 .prj5-box:active,
 .prj6-box:active,
 .prj7-box:active,
-.prj8-box:active
-  {
-    -ms-transform: scale(1.5); /* IE 9 */
-    -webkit-transform: scale(1.5); /* Safari 3-8 */
-    transform: scale(1.5); 
-  } 
-  
+.prj8-box:active {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5);
+}
+
+/* Settings for the about me section */
 .skills {
   background-color: var(--bgColor);
   text-align: left;
@@ -232,64 +223,61 @@ html {
   font-size: 20px;
   font-family: sans-serif;
   height: 200px;
-  border: grey solid 2px;
+  border: var(--borderColor) solid 2px;
   width: 95%;
   margin: 2%;
- 
- }
- .skills h2{
-   margin: 5px;
- }
- 
- .contact {
-   display: flex;
-   background-color: var(--bgColor);
- /*   border: black solid 5px;
-  */  justify-content: center;
+  color: var(--quoteColor);
+}
+.skills h2 {
+  margin: 5px;
+}
+
+/* Settings for the contact section */
+.contact {
+  display: flex;
+  background-color: var(--navColor);
+  justify-content: center;
   width: 95%;
   margin: 2%;
   font-family: sans-serif;
- }
- 
- footer {
-   background-color: var(--navColor);
-   text-align: center;
-   width: 100%;
-   height: 20px;
-   margin-top: auto;
-   font-family: sans-serif;
-   font-size: 15px;
-   color: var(--linkText);
-   }
- 
- 
- /* // Small devices (Phones, less than 768px) */
- @media only screen and (max-width: 768px) { 
-   .navlinks li{
-     float: none;
-     width: 100%;
-   } 
-   .navbar{
-     float: none;
-       width: 100%;
-   }
-   .contact li{
-     float: none;
-       width: 100%;
-   }
-   .main-content .wdQuote, .main-content .profileImg
-   {
-     flex-wrap: wrap;
-     font-size: 15px;
-     float: none ;
-     width: 100%;
-   }
-   .skills{
-     font-size: small;
-   }
- }
+  border: var(--linkText) solid 2px;
+}
 
+/* Settings for the footer section */
 
+footer {
+  background-color: var(--navColor);
+  text-align: center;
+  width: 100%;
+  height: 20px;
+  margin-top: auto;
+  font-family: sans-serif;
+  font-size: 15px;
+  color: var(--linkText);
+}
 
-
-
+/* // Small devices (Phones, less than 768px) */
+@media only screen and (max-width: 768px) {
+  .navlinks li {
+    float: none;
+    width: 100%;
+  }
+  .navbar {
+    float: none;
+    width: 100%;
+  }
+  .contact li {
+    float: none;
+    width: 100%;
+  }
+  .main-content .wdQuote,
+  .main-content .profileImg {
+    flex-wrap: wrap;
+    font-size: 15px;
+    float: none;
+    width: 100%;
+  }
+  .skills {
+    font-size: small;
+  }
+}
