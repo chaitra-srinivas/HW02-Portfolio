@@ -95,8 +95,7 @@ html {
    display: flex-start;
    font-size: large;
    color: var(--linkText);
-/*   border: black solid 5px;
- */  flex: 1 0 25%;
+   flex: 1 0 25%;
    padding: 1.5rem;
  /* when the screen resizes, make it so our columns don't jump in size */
   transition: flex-basis 500ms linear;
@@ -109,12 +108,10 @@ html {
   align-items: flex-end;
   justify-content: flex-start;
   flex-wrap: wrap;
-  background-image: url("/Assets/images/geo.png");
+  /* background-image: url("/Assets/images/geo.png"); */
   height: 600px;
   width: 100%;
   margin-bottom: 2.5rem;
-  /* background-size: cover;
-  background-position: center; */
 }
 
 
@@ -147,216 +144,152 @@ html {
   background-color: (--bgColor);
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+  align-items:  center;
   /* justify-content: space-evenly; */
   flex-wrap: wrap;
   border: grey solid 2px;
-  object-fit: fill;
-  width: 100%;
-}
-
-.prj1-box {
-  border: grey solid 2px;
-  flex: 2 0 auto;
   object-fit: contain;
+  width: 95%;
+  margin: 2%;
   padding: 1rem;
-  /* when the screen resizes, make it so our columns don't jump in size */
-     /*  transition: flex-basis 500ms linear;*/
-    transition: width;
-
-}
-
-.prj2-box {
-  border: grey solid 2px;
-  flex: 1 0 auto;
-  object-fit: contain;
-  padding: 1rem;
-  /*  padding: 1.5rem;
- */ /* when the screen resizes, make it so our columns don't jump in size */
-  transition: flex-basis 500ms linear;
-}
-.prj3-box {
-  border: grey solid 2px;
-  flex: 1 0 auto;
-  object-fit: contain;
-  padding: 1rem;
-  /*  padding: 1.5rem; */
-  /* when the screen resizes, make it so our columns don't jump in size */
-  transition: flex-basis 500ms linear;
  
 }
 
-.prj4-box {
-  border: grey solid 2px;
-  flex: 2 0 auto;
-  object-fit: contain;
-  padding: 1rem;
-  /* when the screen resizes, make it so our columns don't jump in size */
-  transition: flex-basis 500ms linear;
-  
-}
-
-.prj5-box {
-  border: grey solid 2px;
+.prj1-box,
+.prj3-box,
+.prj5-box,
+.prj2-box,
+.prj4-box,
+.prj7-box,
+.prj6-box,
+.prj8-box {
+ /* border: grey solid 2px; */
   flex: 1 0 auto;
   object-fit: contain;
   padding: 1rem;
   /* when the screen resizes, make it so our columns don't jump in size */
   transition: flex-basis 500ms linear;
+}
+
+
+.prj1-box > a > img,
+.prj2-box > a > img,
+.prj3-box > a > img,
+.prj4-box > a > img 
+.prj5-box > a > img,
+.prj6-box > a > img,
+.prj7-box > a > img,
+.prj8-box > a > img {
+        width: 100%; 
+        height: 100%;
+        object-fit: fill;
+} 
+
+
+.project-content a, .contact a
+ {
+        text-decoration: none;
+        text-align: center;
+        padding: 0;
+} 
  
-}
-
-.prj6-box {
-  border: grey solid 2px;
-  flex: 2 0 auto;
-  object-fit: contain;
-  padding: 1rem;
-  /* when the screen resizes, make it so our columns don't jump in size */
-  transition: flex-basis 500ms linear;
-  order:2;
-}
-.prj7-box {
-    border: grey solid 2px;
-    flex: 2 0 auto;
-    object-fit: contain;
-    padding: 1rem;
-    /* when the screen resizes, make it so our columns don't jump in size */
-    transition: flex-basis 500ms linear;
-    order:1;
-  }
-
-  .prj8-box {
-    border: grey solid 2px;
-    flex: 1 0 auto;
-    object-fit: contain;
-    padding: 1rem;
-    /* when the screen resizes, make it so our columns don't jump in size */
-    transition: flex-basis 500ms linear;
-    order:-1;
-  }
- 
-.prj3-box img,
-.prj5-box img,
-.prj7-box img,
-.prj8-box img {
-  max-height: 200px;
-  max-width: 500px;
-}
-
 .prj1-box img,
+.prj3-box img,
 .prj2-box img,
-.prj4-box img,
-.prj6-box img {
-  max-height: 200px;
-  max-width: 575px;
-}
+.prj5-box img,
+.prj4-box img
+ {
+  max-height: 300px;
+  max-width: 375px;}
 
-.prj1-box:hover, 
-.prj2-box:hover,
-.prj3-box:hover,
-.prj4-box:hover, 
-.prj5-box:hover,
-.prj6-box:hover,
-.prj7-box:hover,
-.prj8-box:hover
+
+.prj7-box img,
+.prj6-box img,
+.prj8-box img {
+  max-height: 300px;
+  max-width: 450px;
+ } 
+
+.prj1-box:active,
+.prj2-box:active,
+.prj3-box:active,
+.prj4-box:active, 
+.prj5-box:active,
+.prj6-box:active,
+.prj7-box:active,
+.prj8-box:active
   {
     -ms-transform: scale(1.5); /* IE 9 */
     -webkit-transform: scale(1.5); /* Safari 3-8 */
     transform: scale(1.5); 
   } 
-
+  
 .skills {
- background-color: var(--bgColor);
- text-align: left;
- width: 100%;
- padding: 1.5rem;
- font-size: 20px;
- font-family: sans-serif;
- height: 200px;
- border: grey solid 2px;
-
-}
-.skills .h2{
-  margin: 50px;
-}
-
-.contact {
-  display: flex;
-  background-color: var(--navColor);
-/*   border: black solid 5px;
- */  justify-content: center;
- font-family: sans-serif;
-}
-
-footer {
   background-color: var(--bgColor);
-  text-align: center;
-  width: 100%;
-  /* position: absolute; 
-   bottom: 0;*/
-
-  height: 40px;
-  /* margin-top: 40px; */
-  margin-bottom: auto;
-/*   border: black solid 5px;
- */}
-
-
-/* // Small devices (Phones, less than 768px) */
-@media only screen and (max-width: 768px) { 
-  .navlinks li{
-    float: none;
-    width: 100%;
-  } 
-  .navbar{
-    float: none;
-      width: 100%;
-  }
-  .contact li{
-    float: none;
-      width: 100%;
-  }
-  .main-content .wdQuote, .main-content .profileImg
-  {
-    flex-wrap: wrap;
-    font-size: large;
-    float: none ;
-    width: 100%;
-  }
-}
-
-/* // Large devices (laptops/desktops, more than 992px) */
-/*  @media ( min-width: 992px) { 
-  .navlinks li{
-    float: none;
-      width: 100%;
-  } 
-  .navbar{
-    float: none;
-      width: 100%;
-  }
-  .contact li{
-    float: none;
-      width: 100%;
-  } 
-  
- }*/
-
- /* // Extra Large devices (laptops/desktops, more than 992px) */
- /* @media ( min-width: 1200px) { 
-  .navlinks li{
-    float: none; 
-      width: 100%;
-  }  
-  .navbar{
- float: none;
-      width: 100%;
-  }
-  .contact li{
-    float: none;
-      width: 100%;
-  }
-  
+  text-align: left;
+  padding: 1.5rem;
+  font-size: 20px;
+  font-family: sans-serif;
+  height: 200px;
+  border: grey solid 2px;
+  width: 95%;
+  margin: 2%;
+ 
  }
-*/
+ .skills h2{
+   margin: 5px;
+ }
+ 
+ .contact {
+   display: flex;
+   background-color: var(--bgColor);
+ /*   border: black solid 5px;
+  */  justify-content: center;
+  width: 95%;
+  margin: 2%;
+  font-family: sans-serif;
+ }
+ 
+ footer {
+   background-color: var(--navColor);
+   text-align: center;
+   width: 100%;
+   height: 20px;
+   margin-top: auto;
+   font-family: sans-serif;
+   font-size: 15px;
+   color: var(--linkText);
+   }
+ 
+ 
+ /* // Small devices (Phones, less than 768px) */
+ @media only screen and (max-width: 768px) { 
+   .navlinks li{
+     float: none;
+     width: 100%;
+   } 
+   .navbar{
+     float: none;
+       width: 100%;
+   }
+   .contact li{
+     float: none;
+       width: 100%;
+   }
+   .main-content .wdQuote, .main-content .profileImg
+   {
+     flex-wrap: wrap;
+     font-size: 15px;
+     float: none ;
+     width: 100%;
+   }
+   .skills{
+     font-size: small;
+   }
+ }
+
+
+
+
+
