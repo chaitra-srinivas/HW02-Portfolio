@@ -136,7 +136,7 @@ html {
   float: right;
 }
 
-/* Flexbox container for the projects */
+/* Flexbox container for projects */
 .project-content {
   background-color: var(--bgColor);
   display: flex;
@@ -168,7 +168,8 @@ html {
 .prj1-box > a > img,
 .prj2-box > a > img,
 .prj3-box > a > img,
-.prj4-box > a > img .prj5-box > a > img,
+.prj4-box > a > img,
+.prj5-box > a > img,
 .prj6-box > a > img,
 .prj7-box > a > img,
 .prj8-box > a > img {
