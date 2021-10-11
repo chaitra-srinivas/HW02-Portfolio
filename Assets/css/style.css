@@ -141,15 +141,16 @@ html {
   background-color: var(--bgColor);
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   border: var(--borderColor) solid 2px;
   object-fit: contain;
   width: 95%;
-  margin: 2%;
-  padding: 1rem;
+  margin: 3rem;
+  padding: 1rem; 
+   
 }
+
 /*Consolidated style setting for flex items */
 
 .prj1-box,
@@ -161,8 +162,17 @@ html {
 .prj6-box,
 .prj8-box {
   flex: 1 0 auto;
-  object-fit: contain;
-  padding: 1rem;
+  object-fit: contain; 
+  transition: flex-basis 500ms linear;
+  margin: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start;
+  min-height: 100%;
+  min-width: auto;
+  padding: 1.5rem 0rem;
+  transition: all 0.5s ease-in-out;
+    
 }
 /* Img setting for flex items*/
 .prj1-box > a > img,
@@ -176,6 +186,7 @@ html {
   width: 100%;
   height: 100%;
   object-fit: fill;
+ 
 }
 /* style setting for anchor tag */
 .project-content a,
@@ -184,24 +195,28 @@ html {
   text-align: center;
   padding: 0;
   color: var(--linkText);
-}
+ flex-grow: 1;
+ }
 
 .prj1-box img,
 .prj3-box img,
 .prj2-box img,
 .prj5-box img,
-.prj4-box img {
-  max-height: 300px;
-  max-width: 375px;
-}
-
-.prj7-box img,
+.prj4-box img,
 .prj6-box img,
+.prj7-box img,
 .prj8-box img {
   max-height: 300px;
-  max-width: 450px;
-}
+  max-width: 375px; 
+  background-color: var(--linkText);
+  position: relative;
+  border: 2px solid var(--borderColor);
+  border-radius: 8px;
+  transition: all 0.5s ease-in-out;
+ }
 
+
+ 
 /*Scale image on click */
 .prj1-box:active,
 .prj2-box:active,
@@ -256,6 +271,7 @@ footer {
   font-size: 15px;
   color: var(--linkText);
 }
+
 
 /* // Small devices (Phones, less than 768px) */
 @media only screen and (max-width: 768px) {
