@@ -9,5 +9,5 @@ Screen shots:
 4. ![Interactive images](./Assets/images/Img-scales-onClick.png)
 5. ![Demo page](./Assets/images/Demo.jpeg)
 
-1. ![Deployed application]: https://chaitra-srinivas.github.io/HW02-Portfolio/
-2. ![Github link]: https://github.com/chaitra-srinivas/HW02-Portfolio
+1. ![Deployed application]: https://chaitra-srinivas.github.io/Portfolio/
+2. ![Github link]: https://github.com/chaitra-srinivas/Portfolio
